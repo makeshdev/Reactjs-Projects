@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
-export const CommendInput = ({ commendClick }) => {
+export const CommendInput = ({ commendClick, buttonref }) => {
   const [inputId, setInputId] = useState("");
 
   const changeFun = (e) => {
     setInputId(e.target.value);
   };
+
   return (
     <>
       <div
         className="card-footer py-3 border-0 mt-5 w-50 mx-auto"
         style={{ backgroundColor: "#f8f9fa" }}
       >
+        <h2 className="mb-3 text-primary">Commend...</h2>
         <div className="d-flex flex-start">
           <img
             className="rounded-circle shadow-1-strong me-3"
@@ -42,6 +44,7 @@ export const CommendInput = ({ commendClick }) => {
               commendClick(inputId);
               setInputId("");
             }}
+            ref={buttonref}
           >
             Post comment
           </button>

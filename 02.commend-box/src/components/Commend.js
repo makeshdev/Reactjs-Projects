@@ -1,11 +1,11 @@
 import React from "react";
 
-const Commend = ({ item }) => {
+export const Commend = ({ index, item }) => {
   return (
     <div>
-      <li>{item}</li>
+      <p class="border border-primary p-2" key={index}>
+        {item}
+      </p>
     </div>
   );
 };
-
-export default Commend;
