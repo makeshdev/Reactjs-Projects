@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 50px;
+}
+.heading {
+  font-size: 30px;
+}
+.grid_sty {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
